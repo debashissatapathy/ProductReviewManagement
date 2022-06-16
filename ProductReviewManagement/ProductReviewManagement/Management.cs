@@ -36,6 +36,14 @@ namespace ProductReviewManagement
                         list.ProductId, list.UserId, list.Rating, list.Review, list.IsLike);
             }
         }
-
+        //UC4: Management - Retrieve count of review present for each productID
+        public void CountOfRecord(List<ProductReview> listreview)
+        {
+            var recordData = listreview.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Count = x.Count() });
+            foreach(var list in recordData)
+            {
+                Console.WriteLine(list.ProductId + ":: " + list.Count);
+            }
+        }
     }
 }
