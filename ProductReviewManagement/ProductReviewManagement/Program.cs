@@ -5,7 +5,7 @@ using ProductReviewManagement;
     //UC1: 25 default value added in list
     List<ProductReview> productReviewList = new List<ProductReview>()
     {
-        new ProductReview(){ProductId = 1, UserId = 1, Rating = 5, Review = "Good", IsLike = true},
+        new ProductReview(){ProductId = 1, UserId = 1, Rating = 2, Review = "Good", IsLike = true},
         new ProductReview(){ProductId = 2, UserId = 2, Rating = 4, Review = "Good", IsLike = true},
         new ProductReview(){ProductId = 3, UserId = 3, Rating = 3, Review = "Bad", IsLike= true},
         new ProductReview(){ProductId = 4, UserId = 4, Rating = 4.5, Review = "Good", IsLike = false},
@@ -13,7 +13,7 @@ using ProductReviewManagement;
         new ProductReview(){ProductId = 6, UserId = 6, Rating = 7, Review = "Nice", IsLike = true},
         new ProductReview(){ProductId = 7, UserId = 7, Rating = 5, Review = "Nice", IsLike = true},
         new ProductReview(){ProductId = 8, UserId = 8, Rating = 9, Review = "Good", IsLike = false},
-        new ProductReview(){ProductId = 9, UserId = 9, Rating = 10, Review = "Bad", IsLike = false},
+        new ProductReview(){ProductId = 9, UserId = 9, Rating = 3, Review = "Bad", IsLike = false},
         new ProductReview(){ProductId = 10, UserId = 10, Rating = 6.5, Review = "Nice", IsLike = true},
         new ProductReview(){ProductId = 11, UserId = 11, Rating = 8, Review = "Nice", IsLike = true},
         new ProductReview(){ProductId = 12, UserId = 12, Rating = 1, Review = "Nice", IsLike = true},
@@ -37,5 +37,8 @@ using ProductReviewManagement;
     //                        list.ProductId, list.UserId, list.Rating, list.Review, list.IsLike);
     
     //}
+    //UC2
     Management management = new Management();
-    management.TopRecord(productReviewList);
+    //management.TopRecord(productReviewList);
+    //UC3
+    management.SelectedRecord(productReviewList);
